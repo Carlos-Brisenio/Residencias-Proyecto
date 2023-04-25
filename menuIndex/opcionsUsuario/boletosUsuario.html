@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/menuIndex/style.css">
+    <link rel="stylesheet" href="boletos.css">
     
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -18,7 +19,7 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="logoTM.png" alt="">
+                    <img src="/menuIndex/logoTM.png" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -40,7 +41,7 @@
 
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="/menuIndex/index.html">
                             <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Inicio</span>
                         </a>
@@ -54,7 +55,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="/menuIndex/opcionsUsuario/boletosUsuario.html">
+                        <a href="#">
                             <i class='bx bx-purchase-tag-alt icon'></i>
                             <span class="text nav-text">Boletos</span>
                         </a>
@@ -95,12 +96,30 @@
     </nav>
 
     <section class="home">
-        <div class="text">TM</div>
-        <div class="text"> Aqui va el contenido de cada apartado</div>
+        <div class="text">Boletos Mayordomia 2024</div>
+        <div class="container">
+            <div id="board">
+                <!--Generar tablero de botones de 10x10-->
+                <?php
+                    for ($i = 1; $i <= 10; $i++) {
+                        for ($j = 1; $j <= 10; $j++) {
+                            $buttonNumber = ($i - 1) * 10 + $j;
+                            echo '<button class="button" onclick="showAlert(' . $buttonNumber . ')">' . $buttonNumber . '</button>';
+                        }
+                        echo '<br/>';
+                    }
+                ?>
+            </div>
+            <br/>
+            <button class="button" onclick="previous()">Anterior</button>
+            <button class="button" onclick="next()">Siguiente</button>
+        </div>
     </section>
 
-    <script src="script.js"></script>
-    <script src="main.js"></script>
+    <script src="/menuIndex/script.js"></script>
+    <script src="/menuIndex/main.js"></script>
+    <script src="boletos.js"></script>
+
 
 
 </body>
