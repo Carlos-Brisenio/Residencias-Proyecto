@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google" content="notranslate">
+    <meta name="csrf-token" content="KrT0K4JDi7KSb2c43qIg4ffxdybnDXB6ru5JXNjT">
+	<title>Ticket-Mayordomia©</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'>
+    <link rel="stylesheet" href="https://assets.mindbox.app/css/legacy-app.css?id=2ecdd2ab0a71021f849b">
+</head>
+<body>
+    <div class="dashboard-page bg-gray-100" id="main-container">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="main-navbar">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand md:hidden" href="#">
+                <img src="banderinLogo.png" alt="MindBox" class="img-logo">
+            </a>
+		</div>
+		
+	</div>
+</nav>
+        <div class="body-container animated fadeIn full">
+            <div class="container-fluid">
+                <div class="row">
+    <div class="col-sm-12 text-center">
+        <ul class="breadcrumb-arrow">
+            <li><span>Registro</span></li>
+            </ul>
+        <br><br>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <form action="/registro-Datos.html" method="post" class="confirm" data-confirm="Al continuar estarás de acuerdo con nuestros términos y condiciones de privacidad. Si quieres conocer más al respecto da clic en 'Términos y Condiciones' en el pie de página.">
+            <input type="hidden" name="_token" value="KrT0K4JDi7KSb2c43qIg4ffxdybnDXB6ru5JXNjT">            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">¡Bienvenido Registrate!</h3>
+                </div>
+                <div class="panel-body">
+                    <p class="text-center">Bienvenido al registro de usuarios, en breve registrasemos tus datos para poder comprar tu(s) boleto(s)</p>
+                    <br>
+                    <p><small>Introduce tu CURP para comenzar con el proceso de registro.</small></p>
+                    <div class="form-group ">
+                        <label for="curp" class="control-label">CURP</label>
+                        <input type="text" name="curp" id="curp" class="form-control" placeholder="Introduce aquí tu CURP" value="" required>
+                    </div>
+                </div>
+                <div class="panel-footer text-right">
+                    <a href="/principal-Usuario.html" class="btn btn-default btn-sm"><i class="fa fa-arrow-left"></i> Salir</a>
+                    <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-arrow-right"></i> Continuar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+                <div class="text-center mt-4">
+                    <a href="/principal-Usuario.html" class="btn btn-sm btn-default md:hidden mx-auto">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="notify" class="notifxi-alert"></div>
+</body>
+<script>
+    import axios from "axios";
+
+    const options = {
+        method: 'POST',
+        url: 'https:///tu-url//v1/curp',
+        headers: {
+            'content-type': 'application/json',
+            '/tu-authorization-header/': '/tu-api-key/'
+        },
+        data: {curp: 'CAHF620818HMNLNL09'}
+        };
+
+        axios.request(options).then(function (response) {
+        console.log(response.data);
+        }).catch(function (error) {
+        console.error(error);
+        });
+</script>
+</html>
