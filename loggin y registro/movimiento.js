@@ -6,6 +6,8 @@ const btn_adelante3 = document.querySelector(".adelante-pag3");
 const btn_atras2 = document.querySelector(".volver-pag2");
 const btn_adelante4 = document.querySelector(".adelante-pag4");
 const btn_final = document.querySelector(".final");
+const btn_salir = document.querySelector(".salir");
+
 
 const progressText = document.querySelectorAll(".paso p");
 const progressCheck = document.querySelectorAll(".paso .check" );
@@ -65,5 +67,11 @@ btn_final.addEventListener("click",function(e){
     progressCheck[cont-1].classList.add("active");
     progressText[cont-1].classList.add("active");
     cont += 1;
-    alert("Fin del registro")
+    alert("Fin del registro");
+    setTimeout( function() { window.location.href = "/principal-Usuario.html"; }, 1000 );
+});
+
+btn_salir.addEventListener("click",function(e){
+    e.preventDefault();
+    setTimeout( function() { window.location.href = "/principal-Usuario.html"; }, 200 );
 });
