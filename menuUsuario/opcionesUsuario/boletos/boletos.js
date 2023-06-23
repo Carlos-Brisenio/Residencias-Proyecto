@@ -3,6 +3,8 @@ var currentBoard = 1;
 
 		function showAlert(buttonNumber) {
 			alert("Seleccionó el boleto " + buttonNumber);
+			setTimeout( function() { window.location.href = "/menuUsuario/opcionesUsuario/boletos/registroBoleto.html"; }, 1000 );
+
 		}
 
 		function previous() {
